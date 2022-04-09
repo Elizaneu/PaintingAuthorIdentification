@@ -1,4 +1,4 @@
-from src.classification.features import Sato, sobel, fast
+from src.classification.features import HOG, Sato, sobel, fast
 import numpy as np
 
 
@@ -10,7 +10,7 @@ class Classificator:
         return np.linalg.norm(np.array(element1) - np.array(element2))
 
     def classify(self, train, test, method, use_database=None):
-        if method not in [sobel, Sato, fast]:
+        if method not in [sobel, Sato, fast, HOG]:
             return []
         if use_database:
             featured_train = use_database[method]

@@ -1,17 +1,20 @@
 # Parameters
-from src.classification.features import sobel, Sato, fast
+from src.classification.features import sobel, Sato, fast, HOG
 
 
 METHOD_SOBEL = "sobel"
 METHOD_SATO = "Sato"
 METHOD_FAST = "fast"
+METHOD_HOG = "HOG"
 
-ALL_METHODS = (METHOD_SOBEL, METHOD_SATO, METHOD_FAST)
+
+ALL_METHODS = (METHOD_SOBEL, METHOD_SATO, METHOD_FAST, METHOD_HOG)
 
 METHOD_TO_FUNCTION_MAP = {
     METHOD_SOBEL: sobel,
     METHOD_SATO: Sato,
     METHOD_FAST: fast,
+    METHOD_HOG: HOG
 }
 
 CLASSES = {

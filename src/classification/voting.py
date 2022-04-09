@@ -7,7 +7,7 @@ from src.classification.classificator import Classificator
 def voting(train, test, SHOW=False, use_database=None):
     result = {}
     voted_answers = []
-    cols = len(ALL_METHODS) // 3 + 1
+    cols = len(ALL_METHODS) // 2 + 1
     classifier = Classificator()
     index = 1
     for method in ALL_METHODS:
